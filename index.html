@@ -1,0 +1,22 @@
+<!doctype html>
+<html ng-app="progressBar">
+  <head>
+    <script src="js/angular.js"></script>
+    <script src="js/ui-bootstrap-tpls-0.11.0.js"></script>
+    <script src="js/progressBar.js"></script>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+  </head>
+  <body>
+
+<div ng-controller="ProgressDemoCtrl" class="outerCls">
+     <progressbar max="data.limit" value="dataVal" ng-repeat="dataVal in data.bars" ng-class="{'limitExceeded': (dataVal/data.limit*100) > 99}">
+       <span class="percent">
+         {{(dataVal/data.limit*100) | number:0}}%
+      </span>
+    </progressbar>
+	<select ng-model="selectedProgressBar"><option ng-repeat="dataVal in data.bars">{{$index + 1}}</option></select>
+    <input type="button" ng-click="progress(dataVal)" ng-value="dataVal"  ng-repeat="dataVal in data.buttons"/>
+</div>
+  </body>
+</html>

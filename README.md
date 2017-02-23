@@ -1,4 +1,4 @@
-Behaviours
+Behaviours:
 
     Multiple bars
     One set of controls that can control each bar on the fly

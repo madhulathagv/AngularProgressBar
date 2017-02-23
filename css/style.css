@@ -1,0 +1,25 @@
+.outerCls {
+	margin: 10px;
+}
+
+html input[type=button] {
+	margin: 0 5px;
+}
+
+select {
+	height: 25px;
+    width: 32px;
+}
+
+.percent {
+	position: absolute;
+	left: 0;
+	right: 0;
+	font-weight: bold;
+	color:black; 
+	white-space:nowrap;
+}
+
+.limitExceeded .progress-bar{
+	background-color: #dc5959;
+}
